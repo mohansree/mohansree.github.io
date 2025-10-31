@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
   <title>My Portfolio – Sreerekha M</title>
-  <script src="https://cdn.tailwindcss.com""></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="./menu-toggle.js"></script>
   <style>
 		html {
 			scroll-behavior: smooth;
@@ -29,15 +30,31 @@
 </head>
 <body class="bg-white text-gray-900">
 	
-	<header class="w-full flex justify-between items-center px-8 py-6 border-b border-gray-200">
+	<!---<header class="w-full flex justify-between items-center px-8 py-6 border-b border-gray-200 relative">---->
+	<header class="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-6 border-b border-gray-200 bg-white z-50">
   
 	<h1 class="text-4xl font-bold text-purple-700">Sreerekha M</h1>
-	<nav class="space-x-8 text-xl xl:text-base font-bold">
+	<!------Mobile menu------->
+	<button id="menu-btn" type="button" aria-expanded="false" class="xl:hidden block text-purple-700 focus:outline-none">
+		<svg id="menu-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-6">
+		<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+		<svg id="menu-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-6 hidden">
+			<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</button>
+	<!----<nav
+		id="menu"
+		class="hidden xl:flex space-x-8 text-xl xl:text-base font-bold">------->
+	<nav
+		id="menu"
+		class="hidden fixed top-[72px] left-0 w-full bg-white border-t border-gray-200 flex flex-col space-y-6 px-8 py-6 text-lg font-bold shadow-md xl:relative xl:top-0 xl:left-0 xl:w-auto xl:bg-transparent xl:border-none xl:shadow-none xl:flex xl:flex-row xl:space-y-0 xl:space-x-8 xl:p-0">
 		<a href="#works" class="text-gray-600 hover:text-purple-600">Works</a>
 		<a href="./about.html" class="text-purple-600 hover:text-gray-600">About</a>
 		<a target="_blank" rel="noopener noreferrer"  href="./Resume.pdf" class="text-purple-600 hover:text-gray-600">Resume</a>
 	</nav>
 	</header>
+	<main class="pt-[96px]">
 
 	<!------- Intro section ------->
 	<section class="flex flex-col justify-between mt-20 mb-4 px-20 py-20 text-left">
@@ -134,6 +151,7 @@
     Made with <span class="text-purple-600">♥</span> by Sreerekha © 2025
   </p>
 	</footer>
+	</main>
 </body>
 </html>
 
